@@ -7,7 +7,6 @@ from sklearn.naive_bayes import GaussianNB
 from datasetSL import preprocessing
 from ABCSL import FeatureSelectionABC
 from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score
-# from sklearn.metrics import confusion_matrix
 
 
 class app:
@@ -44,17 +43,6 @@ class app:
         # Menampilkan garis pemisah
         st.markdown("<div class='separator'></div>", unsafe_allow_html=True)
         uploaded_file = st.file_uploader('Upload dataset (.csv)', type='csv')
-
-        # col1, col2 = st.columns(2)
-        # with col1:
-        #     num_bees = st.radio('Jumlah Lebah:', [10, 20, 30, 40, 50])
-        #     st.write(
-        #         '<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
-
-        # with col2:
-        #     max_iter = st.radio('Jumlah Iterasi:', [25, 50, 75, 100])
-        #     st.write(
-        #         '<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
 
         num_bees = st.radio('Jumlah Lebah:', [10, 20, 30, 40, 50])
         st.write(
